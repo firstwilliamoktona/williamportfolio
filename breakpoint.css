@@ -1,0 +1,131 @@
+/* =========================
+         Global Styles
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+         Header
+========================== */
+header {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  background: #323946;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+header .navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+header .menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* =========================
+         Responsiveness
+========================== */
+@media (max-width: 835px) {
+  header .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #323946;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  header .navbar.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header .menu-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 429px) {
+  header {
+    padding: 1rem;
+  }
+
+  header .logo {
+    font-size: 1.5rem;
+  }
+
+  header .navbar a {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+         Image and Content
+========================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.home-content, .about-content {
+  max-width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.home-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+         Footer
+========================== */
+footer {
+  max-width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background: #323946;
+  color: #fff;
+}
